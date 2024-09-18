@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <header className="home-header">
-        <img src={process.env.PUBLIC_URL + '../../public/AFRIMIND_LOGO.png'} alt="Afrimind Logo" style={{ width: '200px' }} />
+        <img src="/AFRIMIND_LOGO.png" alt="AfriMind Logo" className="logo" />
         <h1>Welcome to AfriMind</h1>
         <p>Empowering Women. Rooted in Africa</p>
       </header>

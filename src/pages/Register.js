@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Register.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
@@ -16,13 +17,34 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h1>Register for AfriMind</h1>
-      <form onSubmit={handleSubmit}>
-        <input name="name" type="text" placeholder="Name" onChange={handleChange} />
-        <input name="email" type="email" placeholder="Email" onChange={handleChange} />
-        <input name="password" type="password" placeholder="Password" onChange={handleChange} />
-        <button type="submit">Register</button>
+      <form onSubmit={handleSubmit} className="register-form">
+        <input
+          name="name"
+          type="text"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="register-input"
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          className="register-input"
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+          className="register-input"
+        />
+        <button type="submit" className="register-button">Register</button>
       </form>
     </div>
   );
