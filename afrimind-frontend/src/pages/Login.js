@@ -13,16 +13,18 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/login', formData)
+    axios.post('http://localhost:5000/api/users/login', formData)
       .then(res => {
         console.log(res.data);
-        
+
         /* Store the token in local storage */
         localStorage.setItem('authToken', res.data.token);
 
         navigate('/dashboard'); /* Redirect to dashboard after successful login */
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err.response?.data?.error || 'Login failed');
+      });
   };
 
   return (

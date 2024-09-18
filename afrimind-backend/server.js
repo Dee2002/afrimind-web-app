@@ -14,9 +14,16 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Parse JSON request body
-app.use(cors()); // Enable CORS for cross-origin requests
+app.use(cors({
+  origin: 'http://localhost:3000', // Frontend origin
+  credentials: true
+}));
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
+
 app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;

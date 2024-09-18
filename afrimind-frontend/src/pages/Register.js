@@ -13,17 +13,19 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/register', formData)
+    axios.post('http://localhost:5000/api/users/register', formData)
       .then(res => {
         console.log(res.data);
 
         /* Store the token in local storage */
         localStorage.setItem('authToken', res.data.token);
-        
+
         /* Redirect to dashboard after successful registration */
         navigate('/dashboard');
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err.response?.data?.error || 'Registration failed');
+      });
   };
 
   return (
