@@ -16,6 +16,11 @@ const Register = () => {
     axios.post('http://localhost:5000/register', formData)
       .then(res => {
         console.log(res.data);
+
+        /* Store the token in local storage */
+        localStorage.setItem('authToken', res.data.token);
+        
+        /* Redirect to dashboard after successful registration */
         navigate('/dashboard');
       })
       .catch(err => console.error(err));

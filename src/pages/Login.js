@@ -16,6 +16,10 @@ const Login = () => {
     axios.post('http://localhost:5000/login', formData)
       .then(res => {
         console.log(res.data);
+        
+        /* Store the token in local storage */
+        localStorage.setItem('authToken', res.data.token);
+
         navigate('/dashboard'); /* Redirect to dashboard after successful login */
       })
       .catch(err => console.error(err));
