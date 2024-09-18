@@ -1,0 +1,95 @@
+/* General Styling for the HomePage */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f1; /* Light background for contrast */
+    color: #333;
+  }
+  
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .home-header {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-header img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .home-header h1 {
+    font-size: 2.8rem;
+    color: #154b19; /* AfriMind branding color */
+    margin: 10px 0;
+  }
+  
+  .home-header p {
+    font-size: 1.4rem;
+    color: #666;
+    margin: 10px 0;
+    max-width: 500px;
+  }
+  
+  /* Button Links */
+  .home-links {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .btn-link {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #154b19; /* AfriMind branding color */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-link:hover {
+    background-color: #0e3713; /* Darker shade for hover effect */
+  }
+  
+  /* Footer Styling */
+  .home-footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    width: 100%;
+  }
+  
+  .home-footer p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .home-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .home-header p {
+      font-size: 1.1rem;
+    }
+  
+    .btn-link {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
