@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const router = express.Router();
 
-// Register route
+/* Register route */
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -13,13 +13,14 @@ router.post('/register', async (req, res) => {
   try {
     const newUser = new User({ name, email, password: hashedPassword });
     await newUser.save();
-    res.status(201).json({ message: 'User registered' });
+    const token = jwt.sign({ id: newUser._id }, 'secret');
+    res.status(201).json({ message: 'User registered', token });
   } catch (error) {
     res.status(400).json({ error: 'Email already exists' });
   }
 });
 
-// Login route
+/* Login route */
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
