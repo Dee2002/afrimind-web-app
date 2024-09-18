@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const navigate = useNavigate(); /* Initialize useNavigate hook */
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,7 +14,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:5000/login', formData)
-      .then(res => console.log(res.data))
+      .then(res => {
+        console.log(res.data);
+        navigate('/dashboard'); /* Redirect to dashboard after successful login */
+      })
       .catch(err => console.error(err));
   };
 
