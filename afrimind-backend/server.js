@@ -1,20 +1,23 @@
-require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const cors = require('cors');
-const authRoutes = require('./routes/auth');
+const connectDB = require('./config/db');
+const userRoutes = require('./routes/userRoutes');
+
+// Load environment variables
+dotenv.config();
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/afrimind', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+// Middleware
+app.use(express.json()); // Parse JSON request body
+app.use(cors()); // Enable CORS for cross-origin requests
 
-app.use('/', authRoutes);
+// Routes
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
