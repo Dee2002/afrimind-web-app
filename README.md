@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# AfriMind🌍💡
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**AfriMind** is a mental health platform designed for **African women**, offering resources and support to navigate their mental well-being journeys. We aim to break mental health stigmas while providing culturally sensitive and accessible solutions.
 
-## Available Scripts
+![Status](https://img.shields.io/badge/Status-Development-blue) ![License](https://img.shields.io/badge/License-Apache_2.0-green) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents 📚
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation🖥️)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Project Overview🚀
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+AfriMind is here to empower African women by providing personalized mental health support and tools to help them navigate their mental health journeys. We address the unique mental health challenges faced by this demographic, offering them community support, expert guidance, and self-care tools.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features✨
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **💬 Community Support**: A safe and inclusive space to connect with others.
+- **📋 Daily Check-Ins**: Track your mood and well-being with easy-to-use daily prompts.
+- **📖 Personalized Resources**: Articles, videos, and mindfulness exercises tailored to your needs.
+- **🧠 Mental Health Experts**: Access to professionals who understand your cultural context.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tech Stack 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT, Passport.js
+- **Version Control**: GitHub
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation 🖥️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Follow these steps to get the AfriMind web app running on your local machine:
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ensure you have the following installed:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Git](https://git-scm.com/)
 
-### Code Splitting
+### Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository:
 
-### Analyzing the Bundle Size
+    ```bash
+    git clone https://github.com/yourusername/afrimind-web-app.git
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Navigate to the project directory:
 
-### Making a Progressive Web App
+    ```bash
+    cd afrimind-web-app
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Install the dependencies:
 
-### Advanced Configuration
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Set up your environment variables by creating a `.env` file in the root directory:
 
-### Deployment
+    ```bash
+    PORT=5000
+    MONGO_URI=your_mongodb_uri
+    JWT_SECRET=your_jwt_secret
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. Start the development server:
 
-### `npm run build` fails to minify
+    ```bash
+    npm run dev
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. Open `http://localhost:5000` in your browser to view the app.
+
+---
+
+## Usage 🎯
+
+Once the web app is running, you can:
+
+- **Sign up**: Create a profile and start exploring mental health resources.
+- **Access personalized content**: Receive tailored articles, videos, and exercises.
+- **Track your mood**: Use daily check-ins to monitor your mental well-being.
+- **Join the community**: Engage in discussions and offer support to fellow users.
+
+---
+
+## Contributing 🤝
+
+We welcome contributions from the community! If you'd like to contribute:
+
+1. **Fork the repository**: Click the "Fork" button on the top right of the repository page.
+2. **Create a new branch**:
+
+    ```bash
+    git checkout -b feature-name
+    ```
+
+3. **Make your changes** and commit them:
+
+    ```bash
+    git commit -m 'Added new feature'
+    ```
+
+4. **Push your branch** to GitHub:
+
+    ```bash
+    git push origin feature-name
+    ```
+
+5. **Open a pull request**: Submit your changes for review and discussion.
+
+---
+
+## License 📜
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact 📧
+
+For any inquiries, suggestions, or feedback, feel free to reach out:
+
+- **Delsa Marasha** - Project Lead  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Delsa_Marasha-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/delsa-marasha) | [![Email](https://img.shields.io/badge/Email-deemarasha77%40gmail.com-blue?style=flat&logo=gmail)](mailto:deemarasha77@gmail.com)
+
+---
+
+**Together**, we can make mental health support more accessible to African women and break the stigma surrounding mental well-being.
