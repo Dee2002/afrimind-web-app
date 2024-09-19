@@ -11,15 +11,15 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await getUserProfile(1); /* Assuming the user ID is 1 */
-        setUserData(response.data); /* Assuming the response data is an object */
+        const response = await getUserProfile(1); // Assuming the user ID is 1
+        setUserData(response.data); // Assuming the response data is an object
         setLoading(false);
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
         setError('Failed to load user data');
         setLoading(false);
       }
     };
+
     fetchUserProfile();
   }, []);
 
@@ -50,13 +50,10 @@ const Dashboard = () => {
         </header>
 
         <section className="dashboard-section">
-          {userData && (
-            <UserProfileCard
-              name={userData.name}
-              email={userData.email}
-              joinDate={userData.joinDate}
-              profileImage={userData.profileImage} /* Example fields */
-            />
+          {userData ? (
+            <UserProfileCard user={userData} />
+          ) : (
+            <div>No user data available</div>
           )}
         </section>
 
