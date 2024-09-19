@@ -6,11 +6,11 @@ const API_URL = 'http://localhost:5000';
 export const getUserProfile = async (userId = null) => {
   try {
     const endpoint = userId ? `${API_URL}/users/${userId}` : `${API_URL}/user-profile`;
-    const response = await axios.get(endpoint); /* Dynamic endpoint based on userId presence*/
+    const response = await axios.get(endpoint); /* Dynamic endpoint based on userId presence */
     return response.data;
   } catch (error) {
-    console.error('Error fetching user profile', error);
-    throw error;
+    console.error('Error fetching user profile:', error.response ? error.response.data : error.message);
+    throw new Error('Failed to fetch user profile');
   }
 };
 

@@ -31,7 +31,7 @@ const Login = () => {
     <div className="login-container">
       <h1>Login to AfriMind</h1>
       <form onSubmit={handleSubmit} className="login-form">
-        <input
+          <input
           name="email"
           type="email"
           placeholder="Email"
@@ -40,13 +40,13 @@ const Login = () => {
           className="login-input"
         />
         <input
-          name="password"
+            name="password"
           type="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
           className="login-input"
-        />
+          />
         <button type="submit" className="login-button">Login</button>
       </form>
     </div>
