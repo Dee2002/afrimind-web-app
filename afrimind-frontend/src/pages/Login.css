@@ -47,3 +47,25 @@
     background-color: #2b6c2f; /* Slightly brighter shade on hover */
   }
   
+  /* Focus animations */
+.login-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Error styling */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.login-input.error {
+  border-color: red;
+}
+
+/* Button disabled state */
+.login-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
